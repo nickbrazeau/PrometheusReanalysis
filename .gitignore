@@ -1,0 +1,28 @@
+# MAC files
+.DS_Store
+
+# History files
+.Rhistory
+.Rapp.history
+.Rproj.user
+.RData
+
+# Data files I'm generating
+sandbox/
+inst/doc
+todo.txt
+*.Rproj
+
+# Input and result files too large for GH
+figures/
+# Private Data 
+data/raw/
+data/derived/
+data/sim/
+data/meta/
+
+# Pipeline logs and state
+logs/
+.pipeline_state
+.httr-oauth
+.quarto
