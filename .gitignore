@@ -7,15 +7,16 @@
 .Rproj.user
 .RData
 
-# Data files I'm generating
+# Misc files I'm generating
 sandbox/
 inst/doc
 todo.txt
 *.Rproj
+nonCode_Cabinent/
 
 # Input and result files too large for GH
 figures/
-# Private Data 
+# Private Data
 data/raw/
 data/derived/
 data/sim/
