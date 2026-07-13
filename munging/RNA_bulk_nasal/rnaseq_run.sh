@@ -15,7 +15,7 @@ SAMPLESHEET="${outdir}/samplesheet.csv"
 RESULTS="${outdir}/results"
 LOGDIR="${indir}/logs"
 GENOME="GRCh38"
-PIPELINE_VERSION="1.00.00"
+PIPELINE_VERSION="3.26.0"
 NFCONFIG="${indir}/config/dcc.config"
 
 # ---------------------------
