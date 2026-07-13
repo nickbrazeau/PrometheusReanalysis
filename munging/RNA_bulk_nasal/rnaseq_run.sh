@@ -10,7 +10,7 @@ set -euo pipefail
 ## project-specific configurations
 # ---------------------------
 indir="/hpc/group/cagpm/nfb9/projects/prometheus/"
-outdir="/work/${NETID}/projects/prometheus/rnaseq_work"
+outdir="/work/nfb9/projects/prometheus/rnaseq_work"
 SAMPLESHEET="${outdir}/samplesheet.csv"
 RESULTS="${outdir}/results"
 LOGDIR="${indir}/logs"
@@ -22,13 +22,12 @@ NFCONFIG="${indir}/config/dcc.config"
 # Environment
 # ---------------------------
 # EDIT: point at your micromamba/conda env with nextflow installed,
-# same pattern as the bactopia 'prealm' env
-export PATH="/hpc/home/${NETID}/micromamba/envs/prometheus/bin:${PATH}"
+export PATH="/hpc/home/nfb9/micromamba/envs/prometheus/bin:${PATH}"
 
-# Redirect caches off $HOME 
-export NXF_SINGULARITY_CACHEDIR="/work/${NETID}/nxf_apptainer_cache"
-export NXF_APPTAINER_CACHEDIR="/work/${NETID}/nxf_apptainer_cache"
-export APPTAINER_CACHEDIR="/work/${NETID}/.apptainer"
+# Redirect caches off $HOME
+export NXF_SINGULARITY_CACHEDIR="/work/nfb9/nxf_apptainer_cache"
+export NXF_APPTAINER_CACHEDIR="/work/nfb9/nxf_apptainer_cache"
+export APPTAINER_CACHEDIR="/work/nfb9/.apptainer"
 
 # dirs we need
 mkdir -p "${LOGDIR}" "${outdir}" "${RESULTS}" \
