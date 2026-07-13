@@ -16,6 +16,7 @@ nonCode_Cabinent/
 
 # Input and result files too large for GH
 figures/
+
 # Private Data
 data/raw/
 data/derived/
