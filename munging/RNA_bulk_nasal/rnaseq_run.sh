@@ -51,6 +51,5 @@ nextflow run nf-core/rnaseq \
 
 # ---------------------------
 # tidy up
-# ---------------------------
-rm -rf "${indir}/work/"
+# --------------------------- 
 echo "[$(date)] rnaseq pipeline completed. Cheers 🍻!"
