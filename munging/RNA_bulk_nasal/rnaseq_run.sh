@@ -9,7 +9,7 @@ set -euo pipefail
 # ---------------------------
 ## project-specific configurations
 # ---------------------------
-indir="//hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_nasal/"
+indir="/hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_nasal"
 outdir="/work/nfb9/projects/prometheus/rnaseq_work"
 SAMPLESHEET="${indir}/samplesheet.csv"
 RESULTS="${outdir}/results"
