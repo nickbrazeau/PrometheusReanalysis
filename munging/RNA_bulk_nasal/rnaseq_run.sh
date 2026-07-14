@@ -11,7 +11,7 @@ set -euo pipefail
 # ---------------------------
 indir="/hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_nasal"
 outdir="/work/nfb9/projects/prometheus/rnaseq_work"
-SAMPLESHEET="${indir}/samplesheet.csv"
+SAMPLESHEET="${indir}/sample_fastq_sheet.csv"
 RESULTS="${outdir}/results"
 LOGDIR="${indir}/logs"
 GENOME="GRCh38"
