@@ -52,8 +52,5 @@ nextflow run nf-core/rnaseq \
 # ---------------------------
 # tidy up
 # ---------------------------
-# Uncomment once you've confirmed results/multiqc looks good and you don't need
-# to resume from cached work/ -- same pattern as the bactopia cleanup step:
-# rm -rf "${indir}/work/"
-
+rm -rf "${indir}/work/"
 echo "[$(date)] rnaseq pipeline completed. Cheers 🍻!"
