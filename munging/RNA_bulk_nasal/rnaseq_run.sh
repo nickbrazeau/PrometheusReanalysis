@@ -31,7 +31,7 @@ export APPTAINER_CACHEDIR="/work/nfb9/.apptainer"
 
 # dirs we need
 mkdir -p "${LOGDIR}" "${outdir}" "${RESULTS}" \
-         "${NXF_SINGULARITY_CACHEDIR}" "${APPTAINER_CACHEDIR}"
+         "${NXF_SINGULARITY_CACHEDIR}" "${APPTAINER_CACHEDIR}" "${outdir}/work"
 
 # -----------------------------------------------
 # Pipeline
@@ -40,16 +40,17 @@ nextflow run nf-core/rnaseq \
   -r "${PIPELINE_VERSION}" \
   -profile apptainer \
   -c "${NFCONFIG}" \
+  -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
   --genome "${GENOME}" \
   --max_cpus 32 \
   --max_memory 128.GB \
-  --max_time 72.h \
+  --max_time 96.h \
   -resume \
   2> "${LOGDIR}/rnaseq.2out.txt"
 
 # ---------------------------
 # tidy up
-# --------------------------- 
+# ---------------------------
 echo "[$(date)] rnaseq pipeline completed. Cheers 🍻!"
