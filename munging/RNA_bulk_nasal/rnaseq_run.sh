@@ -44,6 +44,7 @@ nextflow run nf-core/rnaseq \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
   --genome "${GENOME}" \
+  --skip_biotype_qc \
   --max_cpus 32 \
   --max_memory 128.GB \
   --max_time 96.h \
