@@ -17,6 +17,7 @@ LOGDIR="${indir}/logs"
 GENOME="GRCh38"
 PIPELINE_VERSION="3.26.0"
 NFCONFIG="${indir}/config/dcc.config"
+PARAMS_FILE="${indir}/config/rnaseq.params.json"
 
 # ---------------------------
 # Environment
@@ -40,11 +41,11 @@ nextflow run nf-core/rnaseq \
   -r "${PIPELINE_VERSION}" \
   -profile apptainer \
   -c "${NFCONFIG}" \
+  -params-file "${PARAMS_FILE}" \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
   --genome "${GENOME}" \
-  --skip_biotype_qc \
   --max_cpus 32 \
   --max_memory 128.GB \
   --max_time 96.h \
