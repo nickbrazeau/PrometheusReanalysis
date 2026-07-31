@@ -54,4 +54,5 @@ nextflow run nf-core/rnaseq \
 # ---------------------------
 # tidy up
 # ---------------------------
+rm -rf /work/nfb9/projects/PrometheusReanalysis/rnaseq_work/work/ # need to remove for size 
 echo "[$(date)] rnaseq pipeline completed. Cheers 🍻!"
