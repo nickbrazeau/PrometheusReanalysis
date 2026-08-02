@@ -1,3 +1,8 @@
 {
-  "skip_biotype_qc": true
+  "fasta": "/hpc/group/cagpm/nfb9/referencegenomes/GRCh38_10xGenomics/refdata-gex-GRCh38-2024-A/fasta/genome.fa",
+  "gtf": "/hpc/group/cagpm/nfb9/referencegenomes/GRCh38_10xGenomics/refdata-gex-GRCh38-2024-A/genes/genes.gtf",
+  "featurecounts_group_type": "transcript_biotype",
+  "featurecounts_feature_type": "exon",
+  "save_reference": true,
+  "umi_discard_read": 0
 }
