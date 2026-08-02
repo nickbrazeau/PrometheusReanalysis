@@ -14,7 +14,6 @@ outdir="/work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_PBMC"
 SAMPLESHEET="${indir}/sample_fastq_sheet.csv"
 RESULTS="${outdir}/results"
 LOGDIR="${indir}/logs"
-GENOME="GRCh38"
 PIPELINE_VERSION="3.26.0"
 NFCONFIG="${indir}/config/dcc.config"
 PARAMS_FILE="${indir}/config/rnaseq.params.json"
@@ -45,7 +44,6 @@ nextflow run nf-core/rnaseq \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
-  --genome "${GENOME}" \
   --max_cpus 32 \
   --max_memory 128.GB \
   --max_time 96.h \

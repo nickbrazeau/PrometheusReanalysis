@@ -44,8 +44,7 @@ nextflow run nf-core/rnaseq \
   -params-file "${PARAMS_FILE}" \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
-  --outdir "${RESULTS}" \
-  --genome "${GENOME}" \
+  --outdir "${RESULTS}" \ 
   --max_cpus 32 \
   --max_memory 128.GB \
   --max_time 96.h \
