@@ -4,5 +4,6 @@
   "featurecounts_group_type": "transcript_biotype",
   "featurecounts_feature_type": "exon",
   "save_reference": true,
-  "umi_discard_read": 0
+  "umi_discard_read": 0,
+  "skip_biotype_qc": true
 }
