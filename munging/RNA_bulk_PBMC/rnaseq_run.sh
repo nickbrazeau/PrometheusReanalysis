@@ -44,9 +44,6 @@ nextflow run nf-core/rnaseq \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
-  --max_cpus 32 \
-  --max_memory 128.GB \
-  --max_time 96.h \
   -resume \
   2> "${LOGDIR}/rnaseq.2out.txt"
 
