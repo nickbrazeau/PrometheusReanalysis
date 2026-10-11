@@ -9,8 +9,6 @@
 ## .................................................................................
 library(tidyverse)
 library(readxl)
-library(pheatmap)
-source("R/themes.R")
 
 #++++++++++++++++++++++++++++++++++++++++++
 ### Section 0:  Import Raw Data        ####
@@ -96,31 +94,5 @@ log2transformer <- function(cytokinedata) {
 ### Section 2: Write Out Derived    ####
 #++++++++++++++++++++++++++++++++++++++++++
 cytokinedata_transformed <- log2transformer(cytokinedata)
-saveRDS(cytokinedata_transformed, file = "data/derived/cytokines/cytokinedata_log2transformed.RDS")
+saveRDS(cytokinedata_transformed, file = "data/derived/cytokines/plasma_cytokinedata_log2transformed.RDS")
 
-
-
-#............................................................
-# EDA
-#...........................................................
-ncol(cytokinedata_transformed)
-
-dplyr::filter(PID %in% c(paste0("PROM", "002"),
-                         paste0("PROM", "0", 10:17)))
-
-cytokinedata_transformed %>%
-  dplyr::filter(PID %in% c(paste0("PROM", "002"),
-                           paste0("PROM", "0", 24:25))) %>%
-  tidyr::pivot_longer(., cols = -c("PID", "Timepoint"),
-                      names_to = "cytokine", values_to = "log2foldchange") %>%
-  ggplot() +
-  geom_line(aes(x = Timepoint, y = log2foldchange, group = PID, color = PID)) +
-  facet_wrap(~cytokine, scales = "free") +
-  plot_theme +
-  theme(legend.position = "bottom",
-        axis.text.x = element_text(family = "Helvetica", hjust = 1, size = 8, angle = 45))
-
-#++++++++++++++++++++++++++++++++++++++++++
-### Section 3: Imputation    ####
-#++++++++++++++++++++++++++++++++++++++++++
-@@@
