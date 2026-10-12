@@ -9,8 +9,8 @@ set -euo pipefail
 # ---------------------------
 ## project-specific configurations
 # ---------------------------
-indir="/hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_PBMC"
-outdir="/work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_PBMC"
+indir="/hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_WB"
+outdir="/work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_WB"
 SAMPLESHEET="${indir}/sample_fastq_sheet.csv"
 RESULTS="${outdir}/results"
 LOGDIR="${indir}/logs"
@@ -50,5 +50,5 @@ nextflow run nf-core/rnaseq \
 # ---------------------------
 # tidy up
 # ---------------------------
-rm -rf /work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_PBMC/work/ # need to remove for size
+rm -rf /work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_WB/work/ # need to remove for size
 echo "[$(date)] rnaseq pipeline completed. Cheers 🍻!"

@@ -14,5 +14,5 @@ micromamba activate prometheus
 unset SINGULARITY_CACHEDIR NXF_SINGULARITY_CACHEDIR NXF_SINGULARITY_OPTS
 
 # run
-cd /hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_PBMC/
+cd /hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_WB/
 bash rnaseq_run.sh
