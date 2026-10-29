@@ -44,7 +44,9 @@ nextflow run nf-core/rnaseq \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
-  -resume \
+  --skip_bigwig \
+  --skip_stringtie \
+  --skip_biotype_qc \
   2> "${LOGDIR}/rnaseq.2out.txt"
 
 # ---------------------------

@@ -13,7 +13,7 @@ indir="/hpc/group/cagpm/nfb9/projects/PrometheusReanalysis/munging/RNA_bulk_nasa
 outdir="/work/nfb9/projects/PrometheusReanalysis/rnaseq_work/RNA_bulk_nasal"
 SAMPLESHEET="${indir}/sample_fastq_sheet.csv"
 RESULTS="${outdir}/results"
-LOGDIR="${indir}/logs" 
+LOGDIR="${indir}/logs"
 PIPELINE_VERSION="3.26.0"
 NFCONFIG="${indir}/config/dcc.config"
 PARAMS_FILE="${indir}/config/rnaseq.params.json"
@@ -44,10 +44,9 @@ nextflow run nf-core/rnaseq \
   -w "${outdir}/work" \
   --input "${SAMPLESHEET}" \
   --outdir "${RESULTS}" \
-  --max_cpus 32 \
-  --max_memory 128.GB \
-  --max_time 96.h \
-  -resume \
+  --skip_bigwig \
+  --skip_stringtie \
+  --skip_biotype_qc \
   2> "${LOGDIR}/rnaseq.2out.txt"
 
 # ---------------------------
