@@ -5,5 +5,7 @@
   "featurecounts_feature_type": "exon",
   "save_reference": true,
   "umi_discard_read": 0,
-  "skip_biotype_qc": true
+  "skip_biotype_qc": true,
+  "skip_bigwig": true,
+  "skip_stringtie": true
 }
